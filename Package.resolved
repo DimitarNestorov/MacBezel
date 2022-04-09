@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AssetCatalog",
+        "repositoryURL": "https://github.com/dimitarnestorov/AssetCatalog",
+        "state": {
+          "branch": null,
+          "revision": "d9841fc92c96e26cd96befb1bcb62cb27d4c031b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

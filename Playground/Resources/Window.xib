@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Playground" customModule="MacBezel_Playground">
+            <connections>
+                <outlet property="leftColorWell" destination="EHu-0N-PM5" id="iR5-1l-VZN"/>
+                <outlet property="leftColoredView" destination="EZl-sJ-TWP" id="1QO-43-Cyd"/>
+                <outlet property="rightColorWell" destination="dLl-ig-r0G" id="FDp-5q-as3"/>
+                <outlet property="rightColoredView" destination="dbc-h4-mjG" id="7hW-bH-sAR"/>
+                <outlet property="showSFSymbolButton" destination="1Yq-P1-GHO" id="fnL-qF-f3O"/>
+                <outlet property="showXcodeWrenchButton" destination="wQv-8Z-ncR" id="VW8-u9-sde"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="6Sw-Av-aZ1"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="MacBezel Playground" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" bottomStrut="YES"/>
+            <rect key="contentRect" x="556" y="450" width="544" height="380"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
+            <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="544" height="380"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0By-RU-82H">
+                        <rect key="frame" x="30" y="77" width="484" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="9. Show Icon B and fade out for 5 seconds with ease in out timing function" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0al-aQ-6HG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">9</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showWithCustomFadeOutDurationAndEaseInEaseOutTimingFunction:" target="-2" id="WsD-Hj-XYT"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0f8-lj-wyu">
+                        <rect key="frame" x="92" y="45" width="361" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="0. Show Icon A for 10 seconds and disappear instantly" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NiG-PG-WMX">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">0</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showWithVisibleDuration10AndFadeOutDuration0:" target="-2" id="eNU-OJ-eG2"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2S-NJ-pg1">
+                        <rect key="frame" x="211" y="332" width="122" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="1. Show Icon A" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MiP-XF-NHG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">1</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showIconA:" target="-2" id="LSX-Ge-SPj"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TA3-Vw-5m3">
+                        <rect key="frame" x="163" y="300" width="218" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="2. Show Icon B on main thread" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rCG-pr-Uom">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">2</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showIconBOnMainThread:" target="-2" id="a8g-Cv-MQm"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsc-oI-Pkp">
+                        <rect key="frame" x="195" y="270" width="151" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="3. Show Brightness" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="muK-zC-hfD">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">3</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showBrightness:" target="-2" id="jZZ-P5-v5K"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIT-aN-rjg">
+                        <rect key="frame" x="206" y="205" width="131" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="5. Show Volume" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cqi-6m-ERN">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">5</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showVolume:" target="-2" id="5eg-Ol-jkO"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWK-p1-hv7">
+                        <rect key="frame" x="164" y="173" width="216" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="6. Show Mute and NotAllowed" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ah8-u2-1eM">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">6</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showMuteAndNotAllowed:" target="-2" id="xVh-Xu-ZJ8"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LrK-gd-KPE">
+                        <rect key="frame" x="144" y="238" width="255" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="4. Show Icon A on a different display" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9wJ-FW-Yug">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">4</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showOnDifferentDisplay:" target="-2" id="KKM-KG-Pe1"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jdb-eY-8HD">
+                        <rect key="frame" x="145" y="140" width="251" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="7. Show Icon A beneath this window" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QVM-m7-5ej">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">7</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showBeneath:" target="-2" id="0Lu-22-jc6"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Yq-P1-GHO">
+                        <rect key="frame" x="52" y="109" width="440" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="8. Show lock SF Symbol for 30 seconds and fade out for 5 seconds" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nbv-Vl-7gf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">8</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showLockSFSymbolWithCustomFadeOutDuration:" target="-2" id="6Z1-H5-VcE"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wQv-8Z-ncR">
+                        <rect key="frame" x="97" y="13" width="347" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Q. Show Xcode wrench with &quot;Build Succeeded&quot; text" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z0b-va-ntX">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent">q</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="showXcodeWrench:" target="-2" id="6j7-Fj-wXt"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="144" y="-230"/>
+        </window>
+        <window title="MacBezel Background" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="JkG-QA-INw" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" resizable="YES" utility="YES" nonactivatingPanel="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
+            <windowPositionMask key="initialPositionMask" bottomStrut="YES"/>
+            <rect key="contentRect" x="0.0" y="110" width="480" height="308"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
+            <value key="minSize" type="size" width="300" height="200"/>
+            <view key="contentView" id="hJ3-oZ-RmR">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="308"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="EHu-0N-PM5">
+                        <rect key="frame" x="110" y="248" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Yny-Lg-5gd"/>
+                            <constraint firstAttribute="width" constant="40" id="bxL-Sd-rLQ"/>
+                        </constraints>
+                        <color key="color" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                        <connections>
+                            <action selector="changeColoredViewColor:" target="-2" id="yrC-FV-FeG"/>
+                        </connections>
+                    </colorWell>
+                    <colorWell translatesAutoresizingMaskIntoConstraints="NO" id="dLl-ig-r0G">
+                        <rect key="frame" x="330" y="248" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="VRl-vB-fTO"/>
+                            <constraint firstAttribute="height" constant="40" id="Yqc-aH-yp9"/>
+                        </constraints>
+                        <color key="color" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                        <connections>
+                            <action selector="changeColoredViewColor:" target="-2" id="AiZ-OE-Og5"/>
+                        </connections>
+                    </colorWell>
+                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Rt-Uw-GpY">
+                        <rect key="frame" x="20" y="20" width="440" height="220"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="EZl-sJ-TWP" customClass="ColoredView" customModule="MacBezel_Playground">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="dbc-h4-mjG" customClass="ColoredView" customModule="MacBezel_Playground">
+                                <rect key="frame" x="220" y="0.0" width="220" height="220"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EZl-sJ-TWP" firstAttribute="width" secondItem="1Rt-Uw-GpY" secondAttribute="width" multiplier="0.5" id="E7N-Al-vIj"/>
+                            <constraint firstItem="dbc-h4-mjG" firstAttribute="width" secondItem="1Rt-Uw-GpY" secondAttribute="width" multiplier="0.5" id="bQ2-Jj-HZk"/>
+                        </constraints>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dLl-ig-r0G" firstAttribute="top" secondItem="hJ3-oZ-RmR" secondAttribute="top" constant="20" symbolic="YES" id="1d4-nc-i7B"/>
+                    <constraint firstItem="EHu-0N-PM5" firstAttribute="top" secondItem="hJ3-oZ-RmR" secondAttribute="top" constant="20" symbolic="YES" id="3oX-8o-9JC"/>
+                    <constraint firstAttribute="bottom" secondItem="1Rt-Uw-GpY" secondAttribute="bottom" constant="20" symbolic="YES" id="Kkt-O2-QXp"/>
+                    <constraint firstItem="dLl-ig-r0G" firstAttribute="centerX" secondItem="dbc-h4-mjG" secondAttribute="centerX" id="PIS-xz-IQX"/>
+                    <constraint firstAttribute="trailing" secondItem="1Rt-Uw-GpY" secondAttribute="trailing" constant="20" symbolic="YES" id="PmB-I4-2Of"/>
+                    <constraint firstItem="1Rt-Uw-GpY" firstAttribute="top" secondItem="hJ3-oZ-RmR" secondAttribute="top" constant="68" id="bOa-Fo-ceB"/>
+                    <constraint firstItem="1Rt-Uw-GpY" firstAttribute="leading" secondItem="hJ3-oZ-RmR" secondAttribute="leading" constant="20" symbolic="YES" id="iSC-m1-kdv"/>
+                    <constraint firstItem="EHu-0N-PM5" firstAttribute="centerX" secondItem="EZl-sJ-TWP" secondAttribute="centerX" id="yW9-aS-aHZ"/>
+                </constraints>
+            </view>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="level">
+                    <integer key="value" value="0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="144" y="195"/>
+        </window>
+    </objects>
+</document>
